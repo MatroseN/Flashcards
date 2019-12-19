@@ -18,6 +18,6 @@ namespace Flashcards.Database{
         }
 
         private MySqlConnection dbcon;
-        private string connectionString = "Server=localhost;Database=flashcards;User ID=root;Password=***;Pooling=false;SslMode=none;convert zero datetime=True;";
+        private string connectionString = "Server=localhost;Database=flashcards;User ID=root;Password=123;Pooling=false;SslMode=none;convert zero datetime=True;";
     }
 }
