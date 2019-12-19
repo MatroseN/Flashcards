@@ -12,4 +12,4 @@ These are some of the current features and functionality of the web-app
 - Viewing of flashcards based on a flashcards category to make it easier to organize and study
 
 # For more info visit the Wiki
-https://github.com/a17fellu/Flashcards/wiki
+[Wiki](https://github.com/a17fellu/Flashcards/wiki/)
