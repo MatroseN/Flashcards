@@ -11,5 +11,5 @@ These are some of the current features and functionality of the web-app
 - Creation of flashcards that are stored in the MYSQL Database
 - Viewing of flashcards based on a flashcards category to make it easier to organize and study
 
-# For more info visit the Wiki
-[Wiki](https://github.com/a17fellu/Flashcards/wiki/)
+# For more info visit the [Wiki](https://github.com/a17fellu/Flashcards/wiki/)
+
