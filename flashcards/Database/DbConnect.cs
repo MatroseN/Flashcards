@@ -4,6 +4,7 @@ namespace Flashcards.Database{
 
     public class DbConnect{
         public DbConnect(){
+            initialize();
             dbConnect();
         }
 
