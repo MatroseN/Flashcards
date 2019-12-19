@@ -12,6 +12,7 @@ namespace Flashcards.Database{
             connectionString = new DbConnectionString();
         }
 
+        // Use to establish connection to Database
         private void dbConnect(){
 
            dbcon = new MySqlConnection(connectionString.ConnectionString);
