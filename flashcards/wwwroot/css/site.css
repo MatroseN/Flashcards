@@ -1,0 +1,180 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 1.5em;
+    color: #693f75;
+    text-transform: none;
+    font-weight: 200;
+    margin-bottom: 0px;
+    margin-top: 10px;
+    font-family: Arial;
+}
+
+
+h1 {
+    font-size: 1.6em;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+h2 {
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
+h4 {
+    font-size: 1.1em;
+}
+
+h5, h6 {
+    font-size: 1em;
+}
+
+navbar {
+  background-color: #403a47;
+}
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #d4d4d4;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.btn-primary[name="provider"]{
+    color: #fff;
+    background-color: #b61818;
+    border-color: #1861ac;
+}
+
+nav-link {
+    color: #a3a3a3;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #585858;
+    background-color: #7a7a7a;
+    border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 0;
+    padding: 0;
+    background-color: #25232d;
+}
+.footer {
+    height: 5em;
+    position: absolute;
+    bottom: 0;
+    margin-top: -5em;
+    width: 100%;
+    clear: both;
+    background-color: #211f24;
+}
+
+.flashcardCreation-container {
+    margin: auto;
+    margin-top: 3%;
+    width: 25%;
+    color: #e4e4e4;
+}
+
+.createNewFlashcardCategory-container{
+    margin-bottom:3%;
+}
+
+.wrapper {
+    height:auto;
+    overflow: auto;
+    padding-bottom: 5em; /* height of footer */
+}
+
+#toggle-flashcardCreation {
+    border-radius: 80%;
+    margin-top: 3vh;
+    height: 3em;
+    width: 3em;
+}
+
+.button-wrapper {
+    text-align: center;
+    margin: auto;
+}
+
+#form-submit{
+    background-color: #1b6ec2;
+    color: white;
+}
+
+.chooseCategory-container {
+    width: 25%;
+    margin:auto;
+    margin-top: 2%;
+}
+
+.form-control {
+    background-color: rgba(0, 0, 0, 0.44);
+    color:#9d9d9d;
+}
+
+td {
+  color: #eeeeee;
+}
+
+label {
+    color: #eeeeee;
+}
+
+.row p {
+    color: #eeeeee;
+}

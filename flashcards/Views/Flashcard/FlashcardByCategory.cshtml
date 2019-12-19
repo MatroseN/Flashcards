@@ -1,0 +1,145 @@
+﻿@using System.Data
+@using Flashcards.Models.Flashcards;
+@using Microsoft.AspNetCore.Identity;
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+@{
+    ViewData["Title"] = "ViewFlashcards";
+
+    var userId = UserManager.GetUserId(User);
+
+    FlashcardsFromDatabase flashcards = new FlashcardsFromDatabase(@userId);
+    FlashcardCategoryFromDatabase flashcardCategories = new FlashcardCategoryFromDatabase(@userId);
+}
+
+<div class="text-center">
+    <h1 class="display-4">View Flashcards</h1>
+</div>
+
+<div class="wrapper">
+
+    @if (SignInManager.IsSignedIn(User))
+    {
+        <div class="chooseCategory-container">
+        <form action="@Url.Action("FlashcardByCategory", "Flashcard")" method="post">
+            <div class="form-group">
+                <select class="form-control" name="category" onchange="this.form.submit()">
+                    <option>Choose category</option>
+                    @foreach (var flashcardCategory in flashcardCategories.GetFlashcardCategories)
+                    {
+                        <option value="@flashcardCategory.Category">@flashcardCategory.Category @flashcardCategory.CategoryName</option>
+
+                    }
+                </select>
+            </div>
+        </form>
+        </div>
+
+        <!-- Swiper -->
+        <div class="swiper-container">
+
+            <div class="swiper-wrapper">
+                @{
+                    foreach (var flashcard in flashcards.GetFlashcards)
+                    {
+                        if (flashcard.Category == ViewBag.ChosenCategory)
+                        {
+                        <div class="swiper-slide" onclick="showAnswer(@flashcard.ID)">
+                                        <div class="cardText">
+                                            <div class="cardLabel"><p>@flashcard.Label</p></div>
+                                            <div class="qA">
+                                                <div class="front">
+                                                    <p style="float:left">Question: <br /> @flashcard.Question</p>
+                                                </div><br />
+                                                <div class="back">
+                                                    <p id="@flashcard.ID" style="clear:both;display:none">Answer: <br /> @flashcard.Answer</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            }
+                        }
+                    }
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <div class="button-wrapper">
+            <button id="toggle-flashcardCreation" class="btn btn-primary" onclick="toggleFlashcardCreation()">+</button>
+        </div>
+
+        <div id="flashcardCreation-container" class="flashcardCreation-container" style="display:none">
+            <div class="createNewFlashcardCategory-container">
+                <form method="post" action="@Url.Action("CreateNewFlashcardCategory", "Flashcard")">
+                    Create Category:
+                    <div class="form-group">
+                        <input class="form-control" type="hidden" value="@userId" name="userId" />
+                        <input class="form-control" type="text" name="categoryName" />
+                        <input id="form-submit" class="form-control" type="submit" value="Submit">
+                    </div>
+                </form>
+            </div>
+
+            <div class="CreatFlashcard-container">
+                <form action="@Url.Action("CreateNewFlashcard", "Flashcard")" method="post">
+                    <input type="hidden" id="@userId" value="@userId" name="userId" />
+
+                    Category:<br />
+                    <div class="form-group">
+                        <select class="form-control" name="category">
+                            @foreach (var flashcardCategory in flashcardCategories.GetFlashcardCategories)
+                            {
+                                <option value="@flashcardCategory.Category">@flashcardCategory.Category @flashcardCategory.CategoryName</option>
+
+                            }
+                        </select>
+
+
+                        Label:<br>
+                        <input class="form-control" type="text" name="flashcardLabel">
+
+                        Question:<br>
+                        <input class="form-control" type="text" name="question">
+
+                        Answer:<br>
+                        <input class="form-control" type="text" name="answer">
+                        <input id="form-submit" class="form-control" type="submit" value="Submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+    }
+
+</div>
+
+<!-- Swiper JS -->
+<script src="~/CardSwiper/swiper-5.2.0/package/js/swiper.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: {
+            el: '.swiper-pagination',
+        },
+    });
+
+    function showAnswer(item) {
+        $('#' + item).toggle(300);
+    }
+
+    function toggleFlashcardCreation() {
+
+        var x = document.getElementById("flashcardCreation-container");
+
+        if (x.style.display === "none") {
+        x.style.display = "block";
+        } else {
+        x.style.display = "none";
+        }
+
+        $(document).ready(function () {
+            $(".footer").toggle();
+    });
+    }
+</script>
