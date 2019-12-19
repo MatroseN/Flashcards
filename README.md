@@ -1,2 +1,12 @@
 # Flashcards
- Webb-app that lets users create flashcards that then can be used for studying purposes
+ Web-app that lets users create flashcards that then can be used for studying purposes
+
+## Technical
+Flashcards is a web-app made with .NET Core MVC and stores flashcard data in a MYSQL Database and user data in a separate SQL database.
+
+## Some current features/functionality
+These are some of the current features and functionality of the web-app
+
+- Account registration system with support for thirdparty registration/login with google
+- Creation of flashcards that are stored in the MYSQL Database
+- Viewing of flashcards based on a flashcards category to make it easier to organize and study
