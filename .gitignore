@@ -354,3 +354,4 @@ MigrationBackup/
 
 # Database access (These files should not be changed)
 flashcards/Database
+flashcards/Database/DbConnect.cs
