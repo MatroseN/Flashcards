@@ -11,6 +11,11 @@ These are some of the current features and functionality of the web-app
 - Creation of flashcards that are stored in the MYSQL Database
 - Viewing of flashcards based on a flashcards category to make it easier to organize and study
 
+## Planned features/functionality
+
+- Make the website Mobile frinedly
+- Ability to delete flashcards
+
 ## How it looks
 
 ### Swiping through the Cards
