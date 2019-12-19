@@ -22,6 +22,8 @@ namespace Flashcards.Database{
         }
 
         private MySqlConnection dbcon;
+
+        // If this class doesnt exist create it for storing and getting a connectionstring to the database
         private DbConnectionString connectionString;
     }
 }
