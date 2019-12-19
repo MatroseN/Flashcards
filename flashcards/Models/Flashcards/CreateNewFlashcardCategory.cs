@@ -10,9 +10,9 @@ namespace Flashcards.Models.Flashcards
 {
     public class CreateNewFlashcardCategory
     {
+        // Tries to establish a connection to the Database and add the data by calling a stored procedure
         public void createNewFlashcardCategory(string userId, string categoryName)
-        {
-           
+        {           
             dbcon = new DbConnect();
             statement = new Statement("CALL createNewFlashcardCategory(@userId, @categoryName)");
             dbcon.getDbCon().Open();

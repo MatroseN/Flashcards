@@ -16,23 +16,14 @@ namespace Flashcards.Models.Flashcards
             this.question = question;
             this.answer = answer;
             this.userAccountId = userAccountId;
-
-            initialize();
         }
 
-        private void initialize()
-        {
-            visibleQuestionOrAnswer = question;
-            showQuestion = true;
-            showAnswer = false;
-        }
-
+        // Getters And Setters
         public int ID { get => iD;}
         public string Label { get => label;}
         public int Category { get => category;}
         public string Question { get => question;}
         public string Answer { get => answer;}
-        public string VisibleQuestionOrAnswer { get => visibleQuestionOrAnswer; }
         public string UserAccountId { get => userAccountId;}
 
         private int iD;
@@ -41,9 +32,5 @@ namespace Flashcards.Models.Flashcards
         private string question;
         private string answer;
         private string userAccountId;
-
-        private string visibleQuestionOrAnswer;
-        private bool showQuestion;
-        private bool showAnswer;
     }
 }

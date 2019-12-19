@@ -15,6 +15,7 @@ namespace Flashcards.Models.Flashcards
             this.userAccountId = userAccountId;
         }
 
+        // Getters And Setters
         public int Category { get => category; }   
         public string CategoryName { get => categoryName; }
         public string UserAccountId { get => userAccountId; }

@@ -11,7 +11,7 @@ namespace Flashcards.Models.Flashcards
     {
         // Tries to connect to Database and add the following information using a stored procedure from the database
         public void createNewFlashcard(string userId, int category, string flashcardLabel, string question, string answer)
-        {          
+        {        
             dbcon = new DbConnect();
             statement = new Statement("CALL createNewFlashcard(@userId, @category, @flashcardLabel, @question, @answer)");
             dbcon.getDbCon().Open();

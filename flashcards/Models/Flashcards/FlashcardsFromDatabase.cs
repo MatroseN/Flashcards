@@ -22,6 +22,7 @@ namespace Flashcards.Models.Flashcards
             flashcards = new List<Flashcard>();
         }
 
+        // Tries to get the specific users flashcards from the database
         private DataTable getFlashcards(string userAccountId)
         {
             dbcon = new DbConnect();
@@ -39,6 +40,7 @@ namespace Flashcards.Models.Flashcards
             return flashcardTable;
         }
 
+        // Adds the information fetched by getFlashcards to a list of Flashcards
         private void addTableToList(DataTable flashCardTable)
         {
             foreach (DataRow row in flashCardTable.Rows)
