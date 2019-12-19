@@ -353,4 +353,4 @@ MigrationBackup/
 .ionide/
 
 # Database access (These files should not be changed)
-flashcards/Database/*
+flashcards/Database/DbConnectionString.cs
