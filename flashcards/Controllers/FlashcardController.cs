@@ -19,6 +19,7 @@ namespace Flashcards.Controllers
             return View();
         }
 
+        // Call when you want to create a new flashcard
         public IActionResult CreateNewFlashcard(string userId, int category, string flashcardLabel, string question, string answer)
         {
             createFlashcard = new CreateNewFlashcard();
@@ -26,7 +27,8 @@ namespace Flashcards.Controllers
             createFlashcard.createNewFlashcard(userId, category, flashcardLabel, question, answer);
             return RedirectToAction("Flashcard");
         }
-        
+
+        // Call when you want to create a new flashcardCategory
         public IActionResult CreateNewFlashcardCategory(string userId, string categoryName)
         {
             createCategory = new CreateNewFlashcardCategory();
