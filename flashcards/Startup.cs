@@ -43,8 +43,8 @@ namespace Flashcards
             IConfigurationSection googleAuthNSection =
                 Configuration.GetSection("Authentication:Google");
 
-            options.ClientId = googleAuthNSection["ClientId"];
-            options.ClientSecret = googleAuthNSection["ClientSecret"];
+            options.ClientId = "403888418506-gi21218a6cq231d5ubbv1hce5voe8v3d.apps.googleusercontent.com";
+            options.ClientSecret = "5le21b7NDm0KVOLitScTcPC5";
         });
         }
 
