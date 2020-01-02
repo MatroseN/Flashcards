@@ -22,8 +22,8 @@
             {
                 <div class="chooseCategory-container">
                     <form action="@Url.Action("FlashcardByCategory", "Flashcard")" method="post">
-                        <div class="form-group">
-                            <select class="form-control" name="category" onchange="this.form.submit()">
+                        <div id="chooseCategoryForm" class="form-group">
+                            <select id="createCategoryDrp" class="form-control" name="category" onchange="this.form.submit()">
                                 <option>Choose category</option>
                                 @foreach (var flashcardCategory in flashcardCategories.GetFlashcardCategories)
                                 {
