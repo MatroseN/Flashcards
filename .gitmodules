@@ -1,0 +1,2 @@
+[submodule "flashcards/wwwroot/CardSwiper/swiper"]
+	url = https://github.com/nolimits4web/swiper.git
