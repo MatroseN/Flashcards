@@ -10,6 +10,7 @@
 
     FlashcardsFromDatabase flashcards = new FlashcardsFromDatabase(@userId);
     FlashcardCategoryFromDatabase flashcardCategories = new FlashcardCategoryFromDatabase(@userId);
+    int index = 1;
 }
 
 <div class="text-center">
@@ -27,9 +28,11 @@
                         <option>Choose category</option>
                         @foreach (var flashcardCategory in flashcardCategories.GetFlashcardCategories)
                         {
-                            <option value="@flashcardCategory.Category">@flashcardCategory.Category @flashcardCategory.CategoryName</option>
-
+                            <option value="@flashcardCategory.Category">@index @flashcardCategory.CategoryName</option>
+                            index++;
                         }
+
+                        @{index = 1;}
                     </select>
                 </div>
             </form>
@@ -94,9 +97,10 @@
                                     <select class="form-control" name="category">
                                         @foreach (var flashcardCategory in flashcardCategories.GetFlashcardCategories)
                                         {
-                                            <option value="@flashcardCategory.Category">@flashcardCategory.Category @flashcardCategory.CategoryName</option>
-
+                                            <option value="@flashcardCategory.Category">@index @flashcardCategory.CategoryName</option>
+                                            index++;
                                         }
+
                                     </select>
 
 
