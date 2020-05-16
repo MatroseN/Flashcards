@@ -8,10 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="wwwroot\CardSwiper\swiper-5.2.0\.github\ISSUE_TEMPLATE.md" />
-    <None Include="wwwroot\CardSwiper\swiper-5.2.0\.github\lock.yml" />
-    <None Include="wwwroot\CardSwiper\swiper-5.2.0\.github\PULL_REQUEST_TEMPLATE.md" />
-    <None Include="wwwroot\CardSwiper\swiper-5.2.0\.github\stale.yml" />
+    <None Include="wwwroot\CardSwiper\swiper\.github\ISSUE_TEMPLATE.md" />
+    <None Include="wwwroot\CardSwiper\swiper\.github\lock.yml" />
+    <None Include="wwwroot\CardSwiper\swiper\.github\PULL_REQUEST_TEMPLATE.md" />
+    <None Include="wwwroot\CardSwiper\swiper\.github\stale.yml" />
   </ItemGroup>
 
 
