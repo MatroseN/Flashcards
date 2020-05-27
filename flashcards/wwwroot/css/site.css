@@ -1,0 +1,304 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 1.5em;
+    color: #693f75;
+    text-transform: none;
+    font-weight: 200;
+    margin-bottom: 0px;
+    margin-top: 10px;
+    font-family: Arial;
+}
+
+
+h1 {
+    font-size: 1.6em;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+h2 {
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
+h4 {
+    font-size: 1.1em;
+}
+
+h5, h6 {
+    font-size: 1em;
+}
+
+navbar {
+  background-color: #403a47;
+}
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #d4d4d4;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.btn-primary[name="provider"]{
+    color: #fff;
+    background-color: #b61818;
+    border-color: #1861ac;
+}
+
+nav-link {
+    color: #a3a3a3;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #585858;
+    background-color: #7a7a7a;
+    border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    height: 100%;
+    position: relative;
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 0;
+    padding: 0;
+    background-color: #25232d;
+    height: 100%;
+    position: relative;
+}
+
+main {
+    min-height: 90vh; /* will cover the 100% of viewport */
+    overflow: hidden;
+    display: block;
+    position: relative;
+}
+
+footer {
+    clear: both;
+    min-height: 3rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: #211f24;
+    color: aliceblue;
+}
+
+.flashcardCreation-container {
+    margin: auto;
+    margin-top: 3%;
+    width: 16em;
+    color: #e4e4e4;
+}
+
+.createNewFlashcardCategory-container{
+    margin-bottom:3%;
+    width: 16em;
+}
+
+#createCategoryDrp{
+    width: 100%;
+}
+
+.wrapper {
+    height: auto;
+    overflow: auto;
+    padding-bottom: 2.5rem; /* height of footer */
+}
+
+#toggle-flashcardCreation {
+    border-radius: 80%;
+    margin-top: 3vh;
+    height: 3em;
+    width: 3em;
+}
+
+.button-wrapper {
+    text-align: center;
+    margin: auto;
+}
+
+#form-submit{
+    background-color: #1b6ec2;
+    color: white;
+}
+
+.chooseCategory-container {
+    width: 14em;
+    margin:auto;
+    margin-top: 2%;
+}
+
+.form-control {
+    background-color: rgba(0, 0, 0, 0.44);
+    color:#9d9d9d;
+}
+
+td {
+  color: #eeeeee;
+}
+
+label {
+    color: #eeeeee;
+}
+
+.row p {
+    color: #eeeeee;
+}
+
+chooseCategoryForm{
+    width:100%;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #25232d;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 32em;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+    .close:hover,
+    .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #693f75;
+    color: white;
+}
+
+.modal-body {
+    padding: 2px 16px;
+}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #693f75;
+    color: white;
+}
+
+@media only screen and (max-width: 600px) {
+    .modal-content {
+        width: 25em;
+    }
+}
+
+.responsiveImg {
+    max-width: 650px;
+    width: 100%;
+    height: auto;
+}
+
+.wrapper{
+    color: aliceblue;
+}
