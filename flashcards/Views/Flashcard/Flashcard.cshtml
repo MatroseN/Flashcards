@@ -20,15 +20,13 @@
 
         <div class="wrapper">
 
-            @if (SignInManager.IsSignedIn(User))
-            {
+            @if (SignInManager.IsSignedIn(User)) {
                 <div class="chooseCategory-container">
                     <form action="@Url.Action("FlashcardByCategory", "Flashcard")" method="post">
                         <div id="chooseCategoryForm" class="form-group">
                             <select id="createCategoryDrp" class="form-control" name="category" onchange="this.form.submit()">
                                 <option>Choose category</option>
-                                @foreach (var flashcardCategory in flashcardCategories.GetFlashcardCategories)
-                                {
+                                @foreach (var flashcardCategory in flashcardCategories.GetFlashcardCategories) {
                                     <option value="@flashcardCategory.Category">@index @flashcardCategory.CategoryName</option>
                                     index++;
                                 }
@@ -43,11 +41,21 @@
 
                     <div class="swiper-wrapper">
                         @{
-                            foreach (var flashcard in flashcards.GetFlashcards)
-                            {
+                            foreach (var flashcard in flashcards.GetFlashcards) {
                                 <div class="swiper-slide" onclick="showAnswer(@flashcard.ID)">
                                     <div class="cardText">
-                                        <div class="cardLabel"><p>@flashcard.Label</p></div>
+                                        <div class="cardLabel">
+                                            <div class="delete-flashcard">
+                                                <form method="post" action="@Url.Action("DeleteFlashcard", "Flashcard")">
+                                                    <div class="form-group">
+                                                        <input class="delete-button" type="submit" value="&#10060;">
+                                                        <input class="form-control" type="hidden" value="@flashcard.ID" name="flashcardId" />
+                                                        <input class="form-control" type="hidden" value="@userId" name="userId" />
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <p>@flashcard.Label</p>
+                                        </div>
                                         <div class="qA">
                                             <div class="front">
                                                 <p style="float:left">Question: <br /> @flashcard.Question</p>
@@ -95,8 +103,7 @@
                                                 
                                                
 
-                                                @foreach (var flashcardCategory in flashcardCategories.GetFlashcardCategories)
-                                                {
+                                                @foreach (var flashcardCategory in flashcardCategories.GetFlashcardCategories) {
                                                     <option value="@flashcardCategory.Category">@index @flashcardCategory.CategoryName</option>
 
                                                     index++;
@@ -126,7 +133,9 @@
                 </div>
 
 
-            }
+             } else {
+                <p>Signup or login to access the page</p>
+             }
 
         </div>
 
@@ -135,6 +144,7 @@
 
                 <!-- Initialize Swiper -->
                 <script>
+
                     var swiper = new Swiper('.swiper-container', {
                         pagination: {
                             el: '.swiper-pagination',

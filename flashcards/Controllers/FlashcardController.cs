@@ -44,6 +44,15 @@ namespace Flashcards.Controllers
             return View();
         }
 
+        public IActionResult DeleteFlashcard(int flashcardId, string userId) {
+
+            deleteFlashcard = new DeleteFlashcard();
+
+            deleteFlashcard.deleteFlashcard(flashcardId, userId);
+            return RedirectToAction("Flashcard");
+        }
+
+        DeleteFlashcard deleteFlashcard;
         CreateNewFlashcard createFlashcard;
         CreateNewFlashcardCategory createCategory;
     }

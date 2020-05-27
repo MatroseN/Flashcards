@@ -49,7 +49,18 @@
                         {
                             <div class="swiper-slide" onclick="showAnswer(@flashcard.ID)">
                                 <div class="cardText">
-                                    <div class="cardLabel"><p>@flashcard.Label</p></div>
+                                    <div class="cardLabel">
+                                        <p>@flashcard.Label</p>
+                                        <div class="delete-flashcard">
+                                            <form method="post" action="@Url.Action("DeleteFlashcard", "Flashcard")">
+                                                <div class="form-group">
+                                                    <input class="delete-button" type="submit" value="&#10060;">
+                                                    <input class="form-control" type="hidden" value="@flashcard.ID" name="flashcardId" />
+                                                    <input class="form-control" type="hidden" value="@userId" name="userId" />
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
                                     <div class="qA">
                                         <div class="front">
                                             <p style="float:left">Question: <br /> @flashcard.Question</p>

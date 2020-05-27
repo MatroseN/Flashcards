@@ -74,7 +74,7 @@ namespace Flashcards
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Flashcard}/{action=Flashcard}/{id?}");
                 endpoints.MapRazorPages();
             });
         }

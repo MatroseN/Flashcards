@@ -59,7 +59,19 @@ div.swiper-wrapper > div:nth-of-type(even) {
     background-color: #211f24;
 }
 
-.cardLabel p{
+.delete-flashcard {
+    float:right;
+    width:50px;
+}
+
+.delete-button {
+    background-color: #211f24;
+    border: none;
+    margin-top: 5px;
+}
+
+.cardLabel p {
+    float: left;
     padding-left: 10px;
     padding-top: 5px;
 }
